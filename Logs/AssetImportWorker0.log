@@ -283,3 +283,4 @@ Received Import Request.
 Start importing Assets/scripts/PlayerController.cs using Guid(9bf7ae87816fe492490e6d2044bf1a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8ae8426c2a91d8abf8107d088f4095d') in 0.001443 seconds 
   Import took 0.003478 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
