@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
      public float horizontalInput;
      public float speed = 10.0f;
      public float verticalInput;
-     int score = 0;
+     public int score = 0;
     // Start is called before the first frame update
     void Start()
     {

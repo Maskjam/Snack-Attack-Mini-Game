@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+    int scoreToAdd;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class DetectCollisions : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            PlayerController pc = other.GetCompoent<PlayerController>();
+            PlayerController pc = other.GetComponent<PlayerController>();
             pc.score += scoreToAdd;
             Debug.Log(pc.score);
             Destroy(gameObject);
