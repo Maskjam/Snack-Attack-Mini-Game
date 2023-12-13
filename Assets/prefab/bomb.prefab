@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2397025138898047331}
   m_Layer: 0
   m_Name: bomb
-  m_TagString: Untagged
+  m_TagString: badFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,13 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
      public float horizontalInput;
-     public float speed = 10.0f;
+     public float speed = 15.0f;
      public float verticalInput;
      public int score = 0;
+     public AudioClip goodFood;
+     public AudioClip badFood;
+     private AudioSource playerAudio;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,5 +25,19 @@ public class PlayerController : MonoBehaviour
 
           verticalInput = Input.GetAxis("Vertical");
         transform.Translate( Vector3.forward * verticalInput * Time.deltaTime * speed);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+      if (other.gameObject.CompareTag("goodFood"))
+      {
+        playerAudio.PlayOneShot(goodFood, 1.0f);
+      }
+      else if (other.gameObject.CompareTag("badFood"))
+      {
+        playerAudio.PlayOneShot(badFood, 1.0f);
+      }
+      
+      
     }
 }
