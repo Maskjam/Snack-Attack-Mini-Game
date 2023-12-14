@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
      public AudioClip goodFood;
      public AudioClip badFood;
      private AudioSource playerAudio;
+     public ParticleSystem explosionParticle;
+      public ParticleSystem dirtParticle;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +34,12 @@ public class PlayerController : MonoBehaviour
       if (other.gameObject.CompareTag("goodFood"))
       {
         playerAudio.PlayOneShot(goodFood, 1.0f);
+        dirtParticle.Play();
       }
       else if (other.gameObject.CompareTag("badFood"))
       {
         playerAudio.PlayOneShot(badFood, 1.0f);
+        explosionParticle.Play();
       }
       
       
